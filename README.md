@@ -1,6 +1,6 @@
 # Tasks API with Cron Jobs
 
-This project is a Node.js Express backend that provides a Tasks API with integrated Cron Jobs. It uses MySQL as the database and is configured with Docker Compose for easy deployment.
+This project is a Node.js backend that provides a Tasks API with integrated Cron Jobs. It uses MySQL as the database and is configured with Docker Compose for easy deployment.
 
 ## Prerequisites
 
@@ -37,8 +37,19 @@ Before running the application, ensure you have the following installed on your 
    TWILIO_AUTH_TOKEN=your_twilio_auth_token
    TWILIO_PHONE_NUMBER=your_twilio_phone_number
    ```
+4. Run the application on your local machine:
 
-4. Run the application with Docker Compose:
+   ```bash
+   npm install
+   npm start
+   ```
+
+   This will install the required dependencies and start the Node.js application.
+
+5. Access the application at [http://localhost:8000](http://localhost:8000).
+
+
+### Run the application with Docker Compose:
 
    ```bash
    docker-compose up -d
@@ -46,4 +57,10 @@ Before running the application, ensure you have the following installed on your 
 
    This will build and start the MySQL and Node.js services defined in the `docker-compose.yml` file.
 
-5. Access the application at [http://localhost:8000](http://localhost:8000).
+## Key Features
+
+- CRUD operations for tasks.
+- Integration with cron jobs for task scheduling.
+- Authentication and authorization using JWT.
+- SMS notifications using Twilio.
+- Docker Compose for easy deployment.
